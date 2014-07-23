@@ -17,7 +17,7 @@ For __Ubuntu Server 12.04 or 13.04 64-Bit__, issue the following commands. Ensur
 
 ```bash
 # Download the script and make it executable
-wget -O ~/ubuntu.sh https://raw.github.com/mikeshx/gitlab-install/master/ubuntu-server-12.04.sh
+wget -O ~/ubuntu.sh https://raw.github.com/mikeshx/gitlab-install/master/ubuntu.sh
 chmod u+x ~/ubuntu.sh
 
 # Display the help menu
