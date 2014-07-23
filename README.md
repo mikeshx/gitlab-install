@@ -17,14 +17,14 @@ For __Ubuntu Server 12.04 or 13.04 64-Bit__, issue the following commands. Ensur
 
 ```bash
 # Download the script and make it executable
-wget -O ~/ubuntu-server-12.04.sh https://raw.github.com/caseyscarborough/gitlab-install/master/ubuntu-server-12.04.sh
-chmod u+x ~/ubuntu-server-12.04.sh
+wget -O ~/ubuntu-server-12.04.sh https://raw.github.com/mikeshx/gitlab-install/master/ubuntu-server-12.04.sh
+chmod u+x ~/ubuntu.sh
 
 # Display the help menu
-~/ubuntu-server-12.04.sh (-h OR --help)
+~/ubuntu.sh (-h OR --help)
 
 # Run the script
-sudo ~/ubuntu-server-12.04.sh -d gitlab.example.com (--mysql OR --postgresql)
+sudo ~/ubuntu.sh -d gitlab.example.com (--mysql OR --postgresql)
 ```
 
 > Note: Although this script is titled _ubuntu-server-12.04.sh_, it does in fact work on both 12.04 and 13.04.
