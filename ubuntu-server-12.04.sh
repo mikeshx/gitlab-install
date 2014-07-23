@@ -8,7 +8,7 @@
 #
 # INFORMATION
 # Distribution      : Ubuntu 12.04 & 13.04 64-Bit
-# GitLab Version    : 6.7
+# GitLab Version    : 7.1
 # Web Server        : Nginx
 # Init System       : systemd
 # Database          : PostgreSQL (default) or MySQL
@@ -104,8 +104,8 @@ DB_USER_PASSWORD=$(makepasswd --char=25)
 #
 echo -e "\n*== Downloading and configuring Ruby...\n"
 mkdir -p /tmp/ruby && cd /tmp/ruby
-curl --progress ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.gz | tar xz
-cd ruby-2.0.0-p353
+curl --progress ftp://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz | tar xz
+cd ruby-2.1.2
 ./configure --disable-install-rdoc
 make
 sudo make install
@@ -177,7 +177,7 @@ sudo -u $APP_USER -H ./bin/install
 #
 echo -e "\n*== Installing GitLab...\n"
 cd $USER_ROOT
-sudo -u $APP_USER -H git clone https://gitlab.com/gitlab-org/gitlab-ce.git -b 6-7-stable gitlab
+sudo -u $APP_USER -H git clone https://gitlab.com/gitlab-org/gitlab-ce.git -b 7-1-stable gitlab
 cd $APP_ROOT
 sudo -u $APP_USER -H cp $APP_ROOT/config/gitlab.yml.example $APP_ROOT/config/gitlab.yml
 sudo sed -i "s/host: localhost/host: ${DOMAIN_VAR}/" $APP_ROOT/config/gitlab.yml
